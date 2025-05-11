@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+    --color-Header:     #0D1117;
+    --color-Mainbg:     #010409;
+    --color-Border:     #252C32;
+    --color-Components: #151B23;
+    --color-Border_secondary: #2F353D;
+
+}
+@layer base {
+    html,
+    body {
+      @apply bg-Mainbg min-h-screen text-white ;
+    }
+  }

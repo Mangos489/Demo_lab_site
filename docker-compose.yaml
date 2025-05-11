@@ -1,0 +1,37 @@
+version: "3.9"
+
+services:
+  backend:
+    build:
+      context: ./Backend
+      dockerfile: Dockerfile
+    command: python manage.py runserver 0.0.0.0:8000
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./Backend:/app
+    # If you need a DB, you could add:
+    # depends_on:
+    #   - db
+
+  frontend:
+    build:
+      context: ./Frontend
+      dockerfile: Dockerfile
+    command: npm start
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./Frontend:/app
+      
+      
+
+# (Optional) example DB service
+#  db:
+#    image: postgres:15
+#    environment:
+#      POSTGRES_USER: youruser
+#      POSTGRES_PASSWORD: yourpass
+#      POSTGRES_DB: yourdb
+#    ports:
+#      - "5432:5432"
