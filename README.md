@@ -14,8 +14,8 @@ Once youve done that cd into your main directory where running the command dir (
 
 Now youll need to activate your virtual env by running
 
->>cmd
-.\env\scripts\activate.bat
+>cmd
+>>.\env\scripts\activate.bat
 
 Now youre ready to start developing. If you have any issues starting up hmu through my socials and ive got you!
 
@@ -23,8 +23,8 @@ To start running the website:
 
 In your terminal:
 
->>cd into the backend and run
-python manage.py runserver
+>cd into the backend and run
+>>python manage.py runserver
 
 Open a new terminal window and run:
 >cd frontend 
